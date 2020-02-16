@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello, this is CRUD sheet application</h1>
+    <h1>To access its functionality please:</h1>
+    <form method="GET" th:action="@{/login}">
+        <input type="submit" value="Login">
+    </form>
+    <form method="GET" th:action="@{/register}">
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

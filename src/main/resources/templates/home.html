@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <form method="post" th:action="@{/add}" th:object="${worker}">
+        <h1>Add a new worker to the sheet here:</h1>
+        <label for="name">Enter the name:</label>
+        <input type="text" th:field="*{name}" id="name">
+        <label for="salary">Enter the salary:</label>
+        <input type="text" th:field="*{salary}" id="salary">
+        <label for="department">Enter department:</label>
+        <input type="text" th:field="*{department}" id="department">
+        <input type="submit" value="Submit">
+    </form>
+    <form method="post" th:action="@{/remove}" th:object="${worker}">
+        <h1>Remove a worker from the sheet here:</h1>
+        <label for="name">Enter the name:</label>
+        <input type="text" th:field="*{name}" id="name">
+        <label for="salary">Enter the salary:</label>
+        <input type="text" th:field="*{salary}" id="salary">
+        <label for="department">Enter department:</label>
+        <input type="text" th:field="*{department}" id="department">
+        <input type="submit" value="Submit">
+    </form>
+    <form method="get" th:action="@{/view}">
+        <h1>View your sheet here:   <input type="submit" value="View sheet"></h1>
+    </form>
+    <form method="post" th:action="@{/deleteAll}">
+        <h1>Drop your sheet here:  <input type="submit" value="Drop sheet"></h1>
+    </form>
+    <form method="POST" th:action="@{/logout}">
+        <h1>You can also:</h1>
+        <input type="submit" value="Logout">
+    </form>
+</body>
+</html>
