@@ -9,34 +9,13 @@
   <body>
     <h1>Register</h1>
     
-    <form method="POST" th:action="@{/register}" id="registerForm">
-    
-        <label for="username">Username: </label>
-        <input type="text" id="username"/><br/>
+    <form method="POST" action="#" th:action="@{/register}" th:object="${form}" >
 
-        <label for="password">Password: </label>
-        <input type="password" id="password"/><br/>
+        <input type="text" th:field="*{username}"/><br/>
 
-        <label for="confirm">Confirm password: </label>
-        <input type="password" id="confirm"/><br/>
+        <input type="password" th:field="*{password}"/><br/>
 
-        <label for="fullname">Full name: </label>
-        <input type="text" id="fullname"/><br/>
-    
-        <label for="street">Street: </label>
-        <input type="text" id="street"/><br/>
-    
-        <label for="city">City: </label>
-        <input type="text" id="city"/><br/>
-    
-        <label for="state">State: </label>
-        <input type="text" id="state"/><br/>
-    
-        <label for="zip">Zip: </label>
-        <input type="text" id="zip"/><br/>
-    
-        <label for="phone">Phone: </label>
-        <input type="text" id="phone"/><br/>
+        <input type="text" th:field="*{name}"/><br/>
     
         <input type="submit" value="Register"/>
     </form>
