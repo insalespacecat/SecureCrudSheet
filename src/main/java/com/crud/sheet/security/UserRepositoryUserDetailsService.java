@@ -4,11 +4,12 @@ import com.crud.sheet.User;
 import com.crud.sheet.data.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserRepositoryUserDetailsService {
+public class UserRepositoryUserDetailsService implements UserDetailsService {
 
   private UserRepository userRepo;
 
